@@ -16,7 +16,7 @@ const formConfig: ConfigProps<any, AssignmentFormProps> = {
         try {
             if (AssignmentForm.duplicateCheck(values, props.assignments))
             {
-                throw new Error("Assignment cannot be added. This assignment already exists in Duty Roster Set-Up or in the Current Week.");
+                throw new Error("Assignment cannot be added. This assignment already exists in Daily Assignments Set-Up or in the Current Week.");
             }
 
             const newAssignment = AssignmentForm.parseAssignmentFromValues(values);

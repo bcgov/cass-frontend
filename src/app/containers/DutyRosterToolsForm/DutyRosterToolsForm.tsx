@@ -48,7 +48,7 @@ class ImportDefaultDutiesForm extends React.PureComponent<InjectedFormProps<Impo
                         fieldToolTip={
                             <HelpPopover
                                 // tslint:disable-next-line:max-line-length
-                                helpText={'Creates duties based on assignments listed in the Duty Roster Set-up'}
+                                helpText={'Creates duties based on assignments listed in the Daily Assignments Set-up'}
                             />
                         }
                     />
