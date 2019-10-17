@@ -45,7 +45,7 @@
                             "kind": "ImageStreamTag",
                             "name": "${BUILDER_IMAGE}:latest"
                         },
-                        "incremental":false
+                        "incremental": false
                     }
                 },
                 "output": {
@@ -54,7 +54,16 @@
                         "name": "${NAME}-artifacts:${OUTPUT_IMAGE_TAG}"
                     }
                 },
-                "resources": {}
+                "resources": {
+                    "requests": {
+                        "cpu": "10m",
+                        "memory": "10Mi"
+                    },
+                    "limits": {
+                        "cpu": "1",
+                        "memory": "4Gi"
+                    }
+                }
             }
         },
         {
