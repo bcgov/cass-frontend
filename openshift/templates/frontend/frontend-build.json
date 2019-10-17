@@ -45,12 +45,6 @@
                             "kind": "ImageStreamTag",
                             "name": "${BUILDER_IMAGE}:latest"
                         },
-                        "env": [
-                            {
-                                "name": "NPM_MIRROR",
-                                "value": "${NPM_MIRROR}"
-                            }
-                        ],
                         "incremental":false
                     }
                 },
