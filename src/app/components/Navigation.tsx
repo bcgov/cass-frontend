@@ -58,7 +58,7 @@ export default class Navigation extends React.Component<NavigationProps, any> {
                 <Navbar staticTop={true} fluid={true} style={{ borderRadius: 4 }}>
                     <Navbar.Header color="#003366">
                         <NavbarBrand color="#003366">
-                            Sheriff Scheduling System
+                            Court Administration Scheduling System
                         </NavbarBrand>
                     </Navbar.Header>                    
                     <Nav bsStyle="tabs">
