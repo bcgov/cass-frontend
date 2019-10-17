@@ -7,7 +7,7 @@ def FRONTEND_G = 'frontend-green'
 def API_B = 'api-blue'
 def API_G = 'api-green'
 def PATHFINDER_URL = "pathfinder.gov.bc.ca"
-def PROJECT_PREFIX = "jag-shuber"
+def PROJECT_PREFIX = "apndkr"
 // Edit your environment TAG names below
 def TAG_NAMES = [
   'prod'
@@ -21,7 +21,7 @@ def APP_URLS = [
 def SLACK_DEV_CHANNEL="#sheriffscheduling_dev"
 def SLACK_PROD_CHANNEL="sheriff_prod_approval"
 def SLACK_MAIN_CHANNEL="#sheriff_scheduling"
-def route_path="/var/lib/jenkins/jobs/jag-shuber-tools/jobs/Jag-shuber-prod-deploy"
+def route_path="/var/lib/jenkins/jobs/apndkr-tools/jobs/apndkr-prod-deploy"
 
 stage('Approval notification'){
   node{
@@ -49,7 +49,7 @@ stage('Approval notification'){
       // Checking current targeted route
       try {
         ROUT_CHK = sh (
-        script: """oc project jag-shuber-prod; if [ `oc get route sheriff-scheduling-prod -o=jsonpath='{.spec.to.weight}'` == "100" ]; then `oc get route sheriff-scheduling-prod -o=jsonpath='{.spec.to.name}' > ./route-target`; else `oc get route sheriff-scheduling-prod -o=jsonpath='{.spec.alternateBackend[*].name}' > ./route-target`; fi""")
+        script: """oc project apndkr-prod; if [ `oc get route sheriff-scheduling-prod -o=jsonpath='{.spec.to.weight}'` == "100" ]; then `oc get route sheriff-scheduling-prod -o=jsonpath='{.spec.to.name}' > ./route-target`; else `oc get route sheriff-scheduling-prod -o=jsonpath='{.spec.alternateBackend[*].name}' > ./route-target`; fi""")
         echo ">> ROUT_CHK: ${ROUT_CHK}"
 
         if ( "${newTarget}" == 'frontend-blue' ) {
@@ -113,7 +113,7 @@ stage('Approval notification'){
         
         // Switch blue/green
         ROUT_PATCH = sh(
-        script: """oc project jag-shuber-prod; oc set route-backends sheriff-scheduling-prod ${currentTarget}=0 ${newTarget}=100;""")
+        script: """oc project apndkr-prod; oc set route-backends sheriff-scheduling-prod ${currentTarget}=0 ${newTarget}=100;""")
         echo ">> ROUT_PATCH: ${ROUT_PATCH}"
       }catch(error){
         echo "Failed to switch route"

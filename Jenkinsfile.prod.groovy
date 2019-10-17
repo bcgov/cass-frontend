@@ -4,7 +4,7 @@ node{
   common = load "../workspace@script/Jenkinsfile.common.groovy"
 }
 
-PROD_NAMESPACE="jag-shuber-prod"
+PROD_NAMESPACE="apndkr-prod"
 API_DEPLOYMENT="api"
 FRONTEND_DEPLOYMENT="frontend"
 
@@ -17,7 +17,7 @@ stage("Approval"){
 stage("Deploy API") {
   def environment = common.environments.prod.tag
   node{
-    openshift.withProject('jag-shuber-prod'){
+    openshift.withProject('apndkr-prod'){
       try{
         // Deploy API First
         openshiftDeploy(deploymentConfig:API_DEPLOYMENT,waitTime: '900000',namespace:PROD_NAMESPACE)

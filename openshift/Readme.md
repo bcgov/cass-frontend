@@ -20,22 +20,22 @@ templates/
 
 #### Dev
 ```
-oc policy add-role-to-user system:image-puller system:serviceaccount:jag-shuber-dev:default -n jag-shuber-tools
-oc policy add-role-to-user edit system:serviceaccount:jag-shuber-tools:jenkins -n jag-shuber-dev
+oc policy add-role-to-user system:image-puller system:serviceaccount:apndkr-dev:default -n apndkr-tools
+oc policy add-role-to-user edit system:serviceaccount:apndkr-tools:jenkins -n apndkr-dev
 
 ```
 
 #### Test
 ```
-oc policy add-role-to-user system:image-puller system:serviceaccount:jag-shuber-test:default -n jag-shuber-tools
-oc policy add-role-to-user edit system:serviceaccount:jag-shuber-tools:jenkins -n jag-shuber-test
+oc policy add-role-to-user system:image-puller system:serviceaccount:apndkr-test:default -n apndkr-tools
+oc policy add-role-to-user edit system:serviceaccount:apndkr-tools:jenkins -n apndkr-test
 
 ```
 
 #### Prod
 ```
-oc policy add-role-to-user system:image-puller system:serviceaccount:jag-shuber-prod:default -n jag-shuber-tools
-oc policy add-role-to-user edit system:serviceaccount:jag-shuber-tools:jenkins -n jag-shuber-prod
+oc policy add-role-to-user system:image-puller system:serviceaccount:apndkr-prod:default -n apndkr-tools
+oc policy add-role-to-user edit system:serviceaccount:apndkr-tools:jenkins -n apndkr-prod
 
 ```
 

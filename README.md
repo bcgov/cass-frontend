@@ -29,7 +29,7 @@ The development scripts for this application allow customization via an environm
 
 ```env
 # Location to proxy API Traffic
-API_URL="https://frontend-jag-shuber-dev.pathfinder.gov.bc.ca/"
+API_URL="https://frontend-apndkr-dev.pathfinder.gov.bc.ca/"
 # Fake Siteminder Header Overrides
 SMGOV_USERGUID='SOMEGUIDGOESHERE'
 SMGOV_USERDISPLAYNAME='Name, Your'

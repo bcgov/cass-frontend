@@ -208,14 +208,14 @@
             "displayName": "GIT Source Repo URL",
             "description": "A GIT URL to your source code.",
             "required": true,
-            "value": "https://github.com/bcgov/bcjustice-shuber-frontend"
+            "value": "https://github.com/WadeBarnes/jag-shuber-frontend.git"
         },
         {
             "name": "GIT_REF",
             "displayName": "Git Reference",
             "description": "The git reference or branch.",
             "required": true,
-            "value": "master"
+            "value": "cass"
         },
         {
             "name": "SOURCE_CONTEXT_DIR",
