@@ -38,11 +38,11 @@ export default class Symbols extends React.PureComponent<SymbolsProps> {
                 content: <AlertIcon backgroundColor="#F1F1F1" />
             },
             {
-                label: "Sheriff loaned in",
+                label: "Loaned in",
                 content: <SheriffLoanInIcon />
             },
             {
-                label: "Sheriff loaned out",
+                label: "Loaned out",
                 content: <SheriffLoanOutIcon />
             },
         ]
