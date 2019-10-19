@@ -69,7 +69,7 @@ class UpdateSheriffRequest extends UpdateEntityRequest<Sheriff, SheriffModuleSta
             toasts: {
                 success: (s) => `${toTitleCase(s.firstName)} ${toTitleCase(s.lastName)}'s profile has been updated`,
                 // tslint:disable-next-line:max-line-length
-                error: (err) => `Problem encountered while updating sheriff profile: ${err ? err.toString() : 'Unknown Error'}`
+                error: (err) => `Problem encountered while updating profile: ${err ? err.toString() : 'Unknown Error'}`
             }
         }, sheriffMapRequest);
     }

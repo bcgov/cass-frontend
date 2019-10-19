@@ -31,7 +31,7 @@ class SheriffProfileCreateModal extends React.PureComponent<CompositeProps> {
                 }}
             >
                 <Modal.Header closeButton={true}>
-                    Create Sheriff Profile
+                    Create Profile
                 </Modal.Header>
                 <Modal.Body>
                     <SheriffProfile
