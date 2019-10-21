@@ -29,7 +29,6 @@ export type GenderCodeMap = MapType<GenderCode>;
 
 export const WORK_SECTIONS: StringMap = {
     COURTS: 'Courts',
-    JAIL: 'Jail',
     ESCORTS: 'Registry',
     OTHER: 'Other'
 };
