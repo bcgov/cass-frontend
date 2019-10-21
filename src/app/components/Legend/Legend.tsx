@@ -10,7 +10,7 @@ export interface LegendProps {
 
 export default class Legend extends React.PureComponent<LegendProps> {
     render() {
-        const workSectionList: WorkSectionCode[] = ['COURTS', 'ESCORTS', 'JAIL', 'OTHER'];
+        const workSectionList: WorkSectionCode[] = ['COURTS', 'ESCORTS', 'OTHER'];
         return (
             <div className="legend-background">
                 <div className="legend">
