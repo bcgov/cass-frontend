@@ -70,7 +70,7 @@
       "displayName": "Git Reference",
       "description": "The git reference or branch.",
       "required": true,
-      "value": "cass"
+      "value": "cass-renaming"
     },
     {
       "name": "SOURCE_CONTEXT_DIR",
