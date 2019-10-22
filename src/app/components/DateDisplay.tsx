@@ -27,7 +27,7 @@ export default class DateDisplay extends React.PureComponent<DateDisplayProps> {
             dateFormats.push('YYYY');
         }
         if (showTime) {
-            dateFormats.push('hh:mm tt');
+            dateFormats.push('hh:mm');
         }
 
         const dateFormat = dateFormats.join(' ');

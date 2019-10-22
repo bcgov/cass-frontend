@@ -67,7 +67,7 @@ export function createMarks(minTime: Moment, maxTime: Moment, timeIncrement: num
                     marginLeft: 0,
                     marginTop: -2
                 },
-                label: timeLabel.format('hh:mm tt')
+                label: timeLabel.format('hh:mm')
             };
         } else {
             markLabels[index] = '';

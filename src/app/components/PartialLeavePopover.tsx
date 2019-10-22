@@ -25,7 +25,7 @@ export default class PartialLeavePopover extends React.Component<PartialLeavePop
                 placement={placement}
                 displayValue={
                     <span>
-                        {fromTimeString(leave.startTime as string).format('hh:mm tt')}-{fromTimeString(leave.endTime as string).format('hh:mm tt')}
+                        {fromTimeString(leave.startTime as string).format('hh:mm')}-{fromTimeString(leave.endTime as string).format('hh:mm')}
                     </span>
                 }
             />

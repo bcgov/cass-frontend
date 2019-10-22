@@ -57,7 +57,7 @@ export default class SheriffDutyReassignmentForm extends
         return formValues('sourceDutyEndTime')((sourceTimeProps: any) => {
             const { sourceDutyEndTime } = sourceTimeProps;
             const { sourceReassignmentDetails = {}, sourceDuty } = this.props;
-            const timeDisplay = moment(sourceDutyEndTime).format('hh:mm tt');
+            const timeDisplay = moment(sourceDutyEndTime).format('hh:mm');
             return (
                 <Field
                     name="sourceDutyEndTime"
@@ -83,7 +83,7 @@ export default class SheriffDutyReassignmentForm extends
         return formValues('targetDutyStartTime')((targetTimeProps: any) => {
             const { targetDutyStartTime } = targetTimeProps;
             const { targetReassignmentDetails = {}, targetDuty } = this.props;
-            const timeDisplay = moment(targetDutyStartTime).format('hh:mm tt');
+            const timeDisplay = moment(targetDutyStartTime).format('hh:mm');
             return (
                 <Field
                     name="targetDutyStartTime"

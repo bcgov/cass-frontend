@@ -99,8 +99,8 @@ export default class ScheduleDeputyViewList extends React.PureComponent<Schedule
                                                                 {workSectionId ? workSectionId.charAt(0) : ''}
                                                             </CircleIcon>}
                                                         <span style={{ marginLeft: 4 }}>
-                                                            {`${moment(startDateTime).format('hh:mm tt')}
-                                                            - ${moment(endDateTime).format('hh:mm tt')}`}
+                                                            {`${moment(startDateTime).format('hh:mm')}
+                                                            - ${moment(endDateTime).format('hh:mm')}`}
                                                         </span>
                                                     </div>
                                                 </td>

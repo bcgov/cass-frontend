@@ -50,7 +50,7 @@ class DeputySchedule extends React.PureComponent {
                                             <SchedulePublishViewSelectedWeekDisplay />
                                         </div>
                                         <div>
-                                            Summary as of: <i>{moment().format('dddd MMM D, YYYY hh:mm tt')}</i>
+                                            Summary as of: <i>{moment().format('dddd MMM D, YYYY hh:mm')}</i>
                                         </div>
                                     </div>
                                 </div>
