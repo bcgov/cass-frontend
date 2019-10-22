@@ -35,7 +35,7 @@ export default class SheriffProfilePluginTraining
         fullDay: 'training.fullDay',
         partialDay: 'training.partialDay'
     };
-    title: string = 'Training';
+    title: string = 'Qualifications';
     FormComponent = (props: SheriffProfilePluginProps<SheriffProfilePluginTrainingProps>) => (
         <div>
             <LeavesFieldTable
