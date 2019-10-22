@@ -172,7 +172,7 @@ interface DutyRecurrenceFormData {
     };
 }
 
-const TIME_FORMAT = 'hh:mm:ss';
+const TIME_FORMAT = 'hh:mm:ss a';
 
 // tslint:disable-next-line:max-line-length
 export default class AssignmentForm extends React.Component<AssignmentFormProps & InjectedFormProps<any, AssignmentFormProps>> {

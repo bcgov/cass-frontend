@@ -58,8 +58,8 @@ export default class LeavesDisplay extends React.PureComponent<LeavesDisplayProp
                             return (
                                 <tr key={l.id}>
                                     <td>{moment(l.startDate).format('MMM D, YYYY')}</td>
-                                    <td>{fromTimeString(l.startTime as string).format('hh:mm')}</td>
-                                    <td>{fromTimeString(l.endTime as string).format('hh:mm')}</td>
+                                    <td>{fromTimeString(l.startTime as string).format('h:mm a')}</td>
+                                    <td>{fromTimeString(l.endTime as string).format('h:mm a')}</td>
                                     <td><LeaveSubCodeDisplay subCode={l.leaveSubCode}/></td>
                                     <td>
                                         {l.cancelDate && <LeaveCancelledPopover leave={l} />}
