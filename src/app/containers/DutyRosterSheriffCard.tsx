@@ -58,8 +58,8 @@ class ConnectedDutyRosterSheriffCard extends React.Component<ConnectedDutyRoster
         } else if (shiftsForDay.length === 1) {
             const { startDateTime, endDateTime, workSectionId } = shiftsForDay[0];
             return {
-                shiftTime: `${moment(startDateTime).format('HH:mm')} 
-                    - ${moment(endDateTime).format('HH:mm')}`,
+                shiftTime: `${moment(startDateTime).format('hh:mm tt')} 
+                    - ${moment(endDateTime).format('hh:mm tt')}`,
                 workSectionId: workSectionId
             };
         }

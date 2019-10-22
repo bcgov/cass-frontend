@@ -98,7 +98,7 @@ class TimeSlider extends React.Component<TimeSliderProps> {
           onAfterChange={(e) => this.handleAfterChange(e)}
           handle={(p: any) =>
             <HandleWithTooltip
-              overlayFormatter={(v) => moment(minTime).add('minutes', v).format('HH:mm')}
+              overlayFormatter={(v) => moment(minTime).add('minutes', v).format('hh:mm tt')}
               overlayStyle={{ zIndex: 1050 }}
               {...p}
             />

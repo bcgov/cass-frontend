@@ -34,7 +34,7 @@ class AssignmentScheduleTimeline extends Timeline<AssignmentScheduleItem, Group>
         const endTime = ensureMoment(endDateTime);
         return {
             ...assignment,
-            title: `${startTime.format('HH:mm')} - ${endTime.format('HH:mm')}`,
+            title: `${startTime.format('hh:mm tt')} - ${endTime.format('hh:mm tt')}`,
             group: getAssignmentGroupId(assignment),
             start_time: startTime,
             end_time: endTime,
