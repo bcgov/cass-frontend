@@ -64,7 +64,7 @@ getApiUrl (){
 getDevSmVariables() {
   unset devSmVariables
   
-  if [ ! -z ${SMGOV_USERGUID} ] && [ ! -z ${SMGOV_USERDISPLAYNAME} ] && [ ! -z ${SMGOV_USERTYPE} ] && [ ! -z ${SMGOV_USERIDENTIFIER} ]; then
+  if [ ! -z "${SMGOV_USERGUID}" ] && [ ! -z "${SMGOV_USERDISPLAYNAME}" ] && [ ! -z "${SMGOV_USERTYPE}" ] && [ ! -z "${SMGOV_USERIDENTIFIER}" ]; then
     read -r -d '' devSmVariables << EOF
         set \$http_smgov_userguid ${SMGOV_USERGUID};
         set \$http_smgov_userdisplayname ${SMGOV_USERDISPLAYNAME};
@@ -78,6 +78,7 @@ EOF
 
 API_URL=$(getApiUrl)
 DEV_SM_VARIABLES=$(getDevSmVariables)
+DEV_SM_VARIABLES="$(echo "${DEV_SM_VARIABLES}" | sed ':a;N;$!ba;s/\n/\\n/g' | sed 's/\$/\\$/g')"
 
 if [ -z "$API_URL" ]; then
   echo "Could not find API Service to proxy to, exiting"
