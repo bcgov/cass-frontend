@@ -85,7 +85,7 @@ export const selectedShiftsStartTimes = (variedValue: string | null = null) => c
     selectedShifts,
     (shifts: Shift[] = []) => {
         const allSameStartTimes: boolean = allSame(
-            shifts.map(shift => moment(shift.startDateTime).format('HH:mm')), 
+            shifts.map(shift => moment(shift.startDateTime).format('hh:mm')), 
             (compareStartTime, currentStartTime) => currentStartTime === compareStartTime
         );
 
@@ -102,7 +102,7 @@ export const selectedShiftsEndTimes = (variedValue: string | null = null) => cre
     selectedShifts,
     (shifts: Shift[] = []) => {
         const allSameEndTimes: boolean = allSame(
-            shifts.map(shift => moment(shift.endDateTime).format('HH:mm')), 
+            shifts.map(shift => moment(shift.endDateTime).format('hh:mm')), 
             (compareEndTime, currentEndTime) => currentEndTime === compareEndTime
         );
 

@@ -46,6 +46,8 @@ http {
         add_header X-XSS-Protection 1;
         add_header X-Frame-Options DENY;
 
+        %DEV_SM_VARIABLES%
+
         location /api {
             proxy_pass          %API_URL%;
             proxy_set_header    SMGOV_USERGUID  $http_smgov_userguid;

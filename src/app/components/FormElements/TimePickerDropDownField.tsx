@@ -23,7 +23,7 @@ export default class TimePickerDropDownField extends
             timeIncrement = 15,
             style = {}
         } = this.props;
-        const selectedTimeDisplay = value ? moment(value).format('HH:mm') : nullTimeLabel;
+        const selectedTimeDisplay = value ? moment(value).format('hh:mm') : nullTimeLabel;
         const minTime = TimeUtils.getDefaultTimePickerMinTime(moment(value)).toISOString();
         const maxTime = TimeUtils.getDefaultTimePickerMaxTime(moment(value)).toISOString();
 
