@@ -8,18 +8,40 @@ metadata:
   name: frontend
 objects:
 
+  - kind: NetworkSecurityPolicy
+    apiVersion: secops.pathfinder.gov.bc.ca/v1alpha1
+    metadata:
+      name: ${NAME}
+      labels:
+        name: "${NAME}"
+        app: ${APP_NAME}
+        env: ${TAG_NAME}
+    spec:
+      description: |
+        Allow the frontend to talk to the internet or the api pod.
+      source:
+        - - app=${APP_NAME}
+        - - env=${TAG_NAME}
+        - - role=${ROLE}
+      destination:
+        - - app=${APP_NAME}
+        - - env=${TAG_NAME}
+        - - ext:network=any
+        - - role=api
+
   - kind: DeploymentConfig
     apiVersion: v1
     metadata:
-      creationTimestamp:
-      labels:
-        app: "${NAME}"
       name: "${NAME}"
+      labels:
+        name: "${NAME}"
+        app: ${APP_NAME}
+        role: ${ROLE}
+        env: ${TAG_NAME}
     spec:
       replicas: 1
       selector:
-        app: "${NAME}"
-        deploymentconfig: "${NAME}"
+        name: "${NAME}"
       strategy:
         rollingParams:
           intervalSeconds: 1
@@ -30,9 +52,12 @@ objects:
         type: Rolling
       template:
         metadata:
-          creationTimestamp:
+          name: "${NAME}"
           labels:
-            app: "${NAME}"
+            name: "${NAME}"
+            app: ${APP_NAME}
+            role: ${ROLE}
+            env: ${TAG_NAME}
             deploymentconfig: "${NAME}"
         spec:
           containers:
@@ -105,10 +130,12 @@ objects:
   - kind: Service
     apiVersion: v1
     metadata:
-      creationTimestamp:
-      labels:
-        app: "${NAME}"
       name: "${NAME}"
+      labels:
+        name: "${NAME}"
+        app: ${APP_NAME}
+        role: ${ROLE}
+        env: ${TAG_NAME}
     spec:
       ports:
         - name: 8080-tcp
@@ -116,17 +143,19 @@ objects:
           protocol: TCP
           targetPort: 8080
       selector:
-        app: "${NAME}"
-        deploymentconfig: "${NAME}"
+        name: "${NAME}"
       sessionAffinity: None
       type: ClusterIP
 
   - kind: Route
     apiVersion: v1
     metadata:
-      labels:
-        app: "${NAME}"
       name: "${NAME}"
+      labels:
+        name: "${NAME}"
+        app: ${APP_NAME}
+        role: ${ROLE}
+        env: ${TAG_NAME}
     spec:
       host: "${APPLICATION_DOMAIN}"
       port:
@@ -156,6 +185,16 @@ parameters:
       It is also the name of runtime image you want.
     displayName: Name
     name: NAME
+    required: true
+    value: frontend
+  - name: APP_NAME
+    displayName: App Name
+    description: App Name
+    required: true
+    value: cass
+  - name: ROLE
+    displayName: Role
+    description: Role
     required: true
     value: frontend
   - description: The namespace where to get the above image name
