@@ -130,6 +130,10 @@ body {
   width:85%;
 }
 
+.modal-range{
+  margin: 0px 15px;
+}
+
 .drop-shadow{
   box-shadow: 0 2px 3px #A6A6A6;
 }

@@ -126,7 +126,7 @@ export default class LeavesFieldTable extends React.Component<LeavesFieldTablePr
             ),
             CanceledRender: ({ leave }) => (
                 <span>
-                    {fromTimeString(leave[fieldName]).format('hh:mm')}
+                    {fromTimeString(leave[fieldName]).format('h:mm a')}
                 </span>
             )
         };

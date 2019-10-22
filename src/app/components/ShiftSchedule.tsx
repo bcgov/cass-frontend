@@ -33,7 +33,7 @@ class ShiftScheduleTimeline extends Timeline<Shift, Group> {
         const endTime = ensureMoment(endDateTime);
         return {
             ...shift,
-            title: `${startTime.format('hh:mm')} - ${endTime.format('hh:mm')}`,
+            title: `${startTime.format('h:mm a')} - ${endTime.format('h:mm a')}`,
             group: getShiftGroupId(shift),
             start_time: startTime,
             end_time: endTime,

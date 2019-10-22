@@ -64,10 +64,11 @@ export function createMarks(minTime: Moment, maxTime: Moment, timeIncrement: num
                     transform: 'rotate(45deg)',
                     webkitTransform: 'rotate(45deg)',
                     msTransform: 'rotate(45deg)',
-                    marginLeft: 0,
-                    marginTop: -2
+                    marginLeft: -25,
+                    marginTop: 10,
+                    width: '5.5%'
                 },
-                label: timeLabel.format('hh:mm')
+                label: timeLabel.format('h a')
             };
         } else {
             markLabels[index] = '';
