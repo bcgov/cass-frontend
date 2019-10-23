@@ -77,13 +77,13 @@ export default class SheriffProfilePluginId extends SheriffProfileSectionPlugin<
                         SelectorComponent={
                             (sp) => <SheriffRankCodeSelector {...sp} />}  
                     /> }
-                label="Rank"
+                label="Role"
                 validate={[Validators.required]}
             />
             <Field
                 name={this.formFieldNames.badgeNo}
                 component={TextField as any}
-                label="Badge Number"
+                label="Employee No"
                 validate={[Validators.required]}
             />
             <Field
