@@ -25,7 +25,7 @@ export default class ScheduleShiftForm extends
                 <Field
                     name="shouldIncludeSheriffs"
                     component={CheckboxField as any}
-                    label="Include sheriffs"
+                    label="Include assigned staff"
                 />
             </Form>
         );

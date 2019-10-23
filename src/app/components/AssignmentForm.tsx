@@ -414,7 +414,7 @@ export default class AssignmentForm extends React.Component<AssignmentFormProps 
                                                             maxValue={10}
                                                         />
                                                     }
-                                                    label="Number of Sheriffs Required"
+                                                    label="Number of Staff Required"
                                                 />
                                             </ListGroupItem>
                                         );

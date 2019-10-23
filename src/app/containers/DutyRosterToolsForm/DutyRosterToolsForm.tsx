@@ -53,7 +53,7 @@ class ImportDefaultDutiesForm extends React.PureComponent<InjectedFormProps<Impo
                         }
                     />
                     <Field
-                        label="Auto-Assign Sheriff Duties"
+                        label="Auto-Assign Staff Assignments"
                         name="shouldAutoAssignSheriffDuties"
                         component={
                             (p) => (

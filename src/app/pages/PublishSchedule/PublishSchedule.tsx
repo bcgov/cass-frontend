@@ -1,6 +1,6 @@
 import * as React from 'react';
 import * as moment from 'moment';
-import Well from 'react-bootstrap';
+import {Well} from 'react-bootstrap';
 import SheriffScheduleDisplay from '../../containers/SheriffScheduleDisplay';
 import './PublishSchedule.css';
 import LocationDisplay from '../../containers/LocationDisplay';
