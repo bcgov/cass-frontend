@@ -130,7 +130,7 @@ export default class ScheduleMultiShiftForm extends
                                 (sp) =>
                                     <SheriffSelector {...sp} showVariedOption={true} isDisabled={canAssignSheriff} />}
                         />}
-                        label="Sheriff"
+                        label="Assignee"
                     />
                 </Form>
             </div>
