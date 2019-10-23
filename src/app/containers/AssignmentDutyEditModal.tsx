@@ -31,7 +31,7 @@ class AssignmentDutyEditModal extends React.PureComponent<CompositeProps> {
         } = this.props;
 
         const deleteConfirmationMessage =
-            <p style={{ fontSize: 14 }}>Please confirm that you would like to <b>permanently delete</b> this duty.</p>;
+            <p style={{ fontSize: 14 }}>Please confirm that you would like to <b>permanently delete</b> this assignment.</p>;
 
         return (
             <Modal
