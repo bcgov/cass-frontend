@@ -1,5 +1,7 @@
-# Scheriff Scheduling Frontend (Shuber)
-The frontend portion of the Court Administration Scheduling System (code named Shuber).
+# Court Administration Scheduling Frontend
+The frontend portion of the Court Administration Scheduling System.
+
+This project is based on the Sheriff Scheduling System.  It started as a POC/Demo and therefore may still contain references to the term `sheriff`.
 
 ## Project Architecture
 ![Context Diagram](https://github.com/bcgov/jag-shuber-api/blob/master/docs/Context%20diagram%20for%20Scheduling%20System.png)
