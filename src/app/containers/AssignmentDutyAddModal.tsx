@@ -15,7 +15,7 @@ export default class AssignmentDutyAddModal extends React.Component<AssignmentDu
         const { assignmentId } = this.props;
         return (
             <ModalWrapper
-                title="Add a Duty"
+                title="Add an Assignment"
                 showButton={({ handleShow }) => (
                     <Button bsStyle="primary" bsSize="xsmall" onClick={() => handleShow()}>
                         <Glyphicon glyph="plus" />

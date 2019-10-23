@@ -10,7 +10,6 @@ import LocationDisplay from '../../containers/LocationDisplay';
 import SchedulePublishViewControls from '../../containers/SchedulePublishViewControls';
 import SchedulePublishViewSelectedWeekDisplay from '../../containers/SchedulePublishViewSelectedWeekDisplay';
 import Page from '../../components/Page/Page';
-// import BCCrestImg from '../../assets/images/bcss-crest.png';
 
 class DeputySchedule extends React.PureComponent {
     render() {
@@ -32,14 +31,8 @@ class DeputySchedule extends React.PureComponent {
                             <div style={{ flex: '1' }}>
                                 <div className="deputy-schedule-header">
                                     <div style={{ display: 'flex', alignItems: 'center' }}>
-                                        {/* <div>
-                                            <Image src={BCCrestImg} style={{ width: 80 }} />
-                                        </div> */}
                                         <div className="deputy-schedule-header-text">
                                             <h1>Court Administration</h1>
-                                            {/* <span style={{ fontStyle: 'italic', fontSize: 20 }}>
-                                                Honour - Integrity - Commitment
-                                            </span> */}
                                         </div>
                                     </div>
                                     <div className="deputy-schedule-header-date-box ">

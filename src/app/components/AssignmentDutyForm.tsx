@@ -115,7 +115,7 @@ export default class AssignmentDutyForm extends
                         }
                         const deleteConfirmMessage = (
                             <p style={{ fontSize: 14 }}>
-                                <b>Permanently delete</b> this sheriff duty?
+                                <b>Permanently delete</b>?
                             </p>
                         );
                         return (
@@ -126,7 +126,7 @@ export default class AssignmentDutyForm extends
                                             <div className="pull-right">
                                                 <ConfirmationModal
                                                     key={index}
-                                                    title="Delete Sheriff Duty"
+                                                    title="Delete"
                                                     message={deleteConfirmMessage}
                                                     actionBtnLabel={<Glyphicon glyph="trash" />}
                                                     actionBtnStyle="danger"
@@ -146,7 +146,7 @@ export default class AssignmentDutyForm extends
                                                         SelectorComponent={
                                                             (sp) => <SheriffSelector {...sp} />}  
                                                     />}
-                                                    label="Sheriff"
+                                                    label="Assignee"
                                                 />
                                                 <Field
                                                     key={`${fieldInstanceName}_${index}.timeRange`}
@@ -187,7 +187,7 @@ export default class AssignmentDutyForm extends
 
     render() {
         const {
-            assignmentTitle = 'Duty',
+            assignmentTitle = 'Assignment',
             minTime = TimeUtils.getDefaultTimePickerMinTime().toISOString(),
             maxTime = TimeUtils.getDefaultTimePickerMaxTime().toISOString(),
             workSectionId = 'OTHER',
@@ -206,7 +206,7 @@ export default class AssignmentDutyForm extends
                             maxTime={maxTime}
                             timeIncrement={15}
                             color={getWorkSectionColour(workSectionId)}
-                            label={<h2 style={{ marginBottom: 5 }}>Duty Time Range</h2>}
+                            label={<h2 style={{ marginBottom: 5 }}>Time Range</h2>}
                         />}
                     />
                     <br />
@@ -217,7 +217,7 @@ export default class AssignmentDutyForm extends
                         validate={[Validators.maxLength200]}
                     />}
                     <div style={{ marginTop: 40 }}>
-                        <h2>Sheriffs for Duty</h2>
+                        <h2>Assignment</h2>
                         <SheriffDutyFields />
                     </div>
                 </Form>
