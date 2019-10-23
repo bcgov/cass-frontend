@@ -28,7 +28,7 @@ export default class Navigation extends React.Component<NavigationProps, any> {
         },
         schedule: {
             manage: {
-                path: '/sheriffs/schedule',
+                path: '/schedule/manage',
                 label: 'Manage Schedule'
             },
             distribute: {
@@ -37,7 +37,7 @@ export default class Navigation extends React.Component<NavigationProps, any> {
             }
         },
         team: {
-            path: '/sheriffs/manage',
+            path: '/team/manage',
             label: 'My Team'
         },
         assignment: {
