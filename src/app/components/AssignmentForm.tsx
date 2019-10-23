@@ -295,10 +295,10 @@ export default class AssignmentForm extends React.Component<AssignmentFormProps 
                     heading = 'Courts';
                     break;
                 case WORK_SECTIONS.JAIL:
-                    heading = 'Jail';
+                    heading = '';
                     break;
                 case WORK_SECTIONS.ESCORTS:
-                    heading = 'Escorts';
+                    heading = 'Registry';
                     break;
                 case WORK_SECTIONS.OTHER:
                     heading = 'Other';
