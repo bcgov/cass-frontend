@@ -62,7 +62,7 @@ export default class ScheduleMultiShiftForm extends
                     fieldToolTip={
                         <HelpPopover
                             // tslint:disable-next-line:max-line-length
-                            helpText={'For shift assignments already imported into the duty roster, make your edits in the duty roster.'}
+                            helpText={'For shift assignments already imported into the daily assignments, make your edits in the daily assignments.'}
                         />}
                     label="Anticipated Assignment"
                 />
@@ -130,7 +130,7 @@ export default class ScheduleMultiShiftForm extends
                                 (sp) =>
                                     <SheriffSelector {...sp} showVariedOption={true} isDisabled={canAssignSheriff} />}
                         />}
-                        label="Sheriff"
+                        label="Assignee"
                     />
                 </Form>
             </div>

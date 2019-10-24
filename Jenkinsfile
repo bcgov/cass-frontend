@@ -75,7 +75,7 @@ stage('Build ' + common.APP_NAME) {
   //     try{
   //       echo "Creating Ephemeral Postgress instance for testing"
   //       POSTGRESS = sh (
-  //         script: """oc project jag-shuber-tools; oc process -f "${work_space}/openshift/test/frontend-deploy.json" | oc create -f -; oc process -f "${work_space}/openshift/test/api-postgress-ephemeral.json" | oc create -f - """)
+  //         script: """oc project apndkr-tools; oc process -f "${work_space}/openshift/test/frontend-deploy.json" | oc create -f -; oc process -f "${work_space}/openshift/test/api-postgress-ephemeral.json" | oc create -f - """)
   //         echo ">> POSTGRESS: ${POSTGRESS}" 
         
   //     } catch(error){
@@ -91,7 +91,7 @@ stage('Build ' + common.APP_NAME) {
   //   try{
   //     echo "Run Test Case scripts here"
   //     POSTGRESS_DEL = sh (
-  //       script: """oc project jag-shuber-tools; oc process -f "${work_space}/openshift/test/frontend-deploy.json" | oc delete -f -; oc process -f "${work_space}/openshift/test/api-postgress-ephemeral.json" | oc delete -f - """)
+  //       script: """oc project apndkr-tools; oc process -f "${work_space}/openshift/test/frontend-deploy.json" | oc delete -f -; oc process -f "${work_space}/openshift/test/api-postgress-ephemeral.json" | oc delete -f - """)
   //       echo ">> ${POSTGRESS_DEL}"
   //     echo "postgress instance deleted successfully"
   //   } catch(error){
@@ -166,7 +166,7 @@ stage("Tag for ${common.environments.prod.name}") {
 //       try {
 //       // Check for current route target 
 //       ROUT_CHK = sh (
-//       script: """oc project jag-shuber-prod; if [ `oc get route sheriff-scheduling-prod -o=jsonpath='{.spec.to.weight}'` == "100" ]; then `oc get route sheriff-scheduling-prod -o=jsonpath='{.spec.to.name}' > route-target`; else `oc get route sheriff-scheduling-prod -o=jsonpath='{.spec.alternateBackend[*].name}' > route-target`; fi ; cat route-target""")
+//       script: """oc project apndkr-prod; if [ `oc get route sheriff-scheduling-prod -o=jsonpath='{.spec.to.weight}'` == "100" ]; then `oc get route sheriff-scheduling-prod -o=jsonpath='{.spec.to.name}' > route-target`; else `oc get route sheriff-scheduling-prod -o=jsonpath='{.spec.alternateBackend[*].name}' > route-target`; fi ; cat route-target""")
       
 //       // Tag the new build as "prod"
 //       openshiftTag destStream: IMAGESTREAM_NAME, verbose: 'true', destTag: environment, srcStream: IMAGESTREAM_NAME, srcTag: "${IMAGE_HASH}", waitTime: '900000'
@@ -212,7 +212,7 @@ stage("Tag for ${common.environments.prod.name}") {
 //     node{
 //       try{
 //         //Trigger remote job
-//         def handle = build job: 'Jag-shuber-prod-deploy'
+//         def handle = build job: 'apndkr-prod-deploy'
 //         }catch(error){
 //         echo "Failed to switch route"
 //         throw error

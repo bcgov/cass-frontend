@@ -2,7 +2,7 @@
   "name": "shuber",
   "version": "0.1.0",
   "private": true,
-  "homepage": "/sheriff-scheduling",
+  "homepage": "/",
   "scripts": {
     "start": "node scripts/start.js",
     "start:dev": "API_URL=http://localhost:3001/ yarn start",

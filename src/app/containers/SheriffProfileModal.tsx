@@ -53,7 +53,7 @@ class SheriffProfileModal extends React.PureComponent<CompositeProps> {
                 }}
             >
                 <Modal.Header closeButton={true}>
-                    {isEditing && 'Updating'} Sheriff Profile
+                    {isEditing && 'Updating'} Profile
                 </Modal.Header>
                 <Modal.Body>
                     {!isEditing && <Button

@@ -19,7 +19,7 @@ export default class Navigation extends React.Component<NavigationProps, any> {
         dutyRoster: {
             timeline: {
                 path: '/',
-                label: 'Duty Roster'
+                label: 'Daily'
             },
             setup: {
                 path: '/assignments/manage/default',
@@ -28,7 +28,7 @@ export default class Navigation extends React.Component<NavigationProps, any> {
         },
         schedule: {
             manage: {
-                path: '/sheriffs/schedule',
+                path: '/schedule/manage',
                 label: 'Manage Schedule'
             },
             distribute: {
@@ -37,7 +37,7 @@ export default class Navigation extends React.Component<NavigationProps, any> {
             }
         },
         team: {
-            path: '/sheriffs/manage',
+            path: '/team/manage',
             label: 'My Team'
         },
         assignment: {
@@ -58,11 +58,11 @@ export default class Navigation extends React.Component<NavigationProps, any> {
                 <Navbar staticTop={true} fluid={true} style={{ borderRadius: 4 }}>
                     <Navbar.Header color="#003366">
                         <NavbarBrand color="#003366">
-                            Sheriff Scheduling System
+                            Court Administration Scheduling System
                         </NavbarBrand>
                     </Navbar.Header>                    
                     <Nav bsStyle="tabs">
-                        <NavigationDropDown title="Duty Roster" id="duty_roster_dropdown">
+                        <NavigationDropDown title="Daily" id="duty_roster_dropdown">
                             <NavigationLink exactMatch={true} {...Navigation.Routes.dutyRoster.timeline} />
                             <NavigationLink {...Navigation.Routes.dutyRoster.setup} />
                         </NavigationDropDown>

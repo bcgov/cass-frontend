@@ -2,17 +2,17 @@ import moment from 'moment';
 
 export function getDefaultStartTime(dayForTime?: moment.Moment): moment.Moment {
     if (dayForTime && dayForTime.isValid()) {
-        return dayForTime.startOf('day').add(6, 'hour');
+        return dayForTime.startOf('day').add(8, 'hour').add(30, 'minute');
     } else {
-        return moment().startOf('day').add(6, 'hour');
+        return moment().startOf('day').add(8, 'hour').add(30, 'minute');
     }
 }
 
 export function getDefaultEndTime(dayForTime?: moment.Moment): moment.Moment {
     if (dayForTime && dayForTime.isValid()) {
-        return dayForTime.startOf('day').add(18, 'hour');
+        return dayForTime.startOf('day').add(16, 'hour').add(30, 'minute');;
     } else {
-        return moment().startOf('day').add(18, 'hour');
+        return moment().startOf('day').add(16, 'hour').add(30, 'minute');;
     }
 }
 

@@ -39,7 +39,7 @@ class AssignmentEditModal extends React.PureComponent<
 
         const deleteConfirmationMessage = (            
             <p style={{ fontSize: 14 }}>
-                <b>This will impact your Duty Roster!</b><br />
+                <b>This will impact your Daily Assignments!</b><br />
                 {toTitleCase(assignmentTitle)} duties for today and all future days will be removed.
             </p>
         );

@@ -31,7 +31,7 @@ class SheriffProfileCreateModal extends React.PureComponent<CompositeProps> {
                 }}
             >
                 <Modal.Header closeButton={true}>
-                    Create Sheriff Profile
+                    Create Profile
                 </Modal.Header>
                 <Modal.Body>
                     <SheriffProfile
@@ -69,7 +69,7 @@ export default class extends connectModal(modalConfig)(SheriffProfileCreateModal
     static ShowButton = connect<{}, { showAction: (props: SheriffProfileCreateModalProps) => void }, SheriffProfileCreateModalProps>(undefined, { showAction })(
         ({ showAction: showModalAction, ...props }) => (
             <Button className="action-button" onClick={() => showModalAction(props)}>
-                <Glyphicon glyph="plus" /> Add a Sheriff
+                <Glyphicon glyph="plus" /> Add
             </Button>
         )
     );

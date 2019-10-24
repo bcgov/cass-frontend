@@ -11,7 +11,7 @@ export interface SheriffProfilePluginProps<T = any> {
 export interface SheriffProfilePlugin<T = any> {
     /**
      * This property is used for namespacing the form data,
-     * validation and maintaining state of sheriff profile
+     * validation and maintaining state of profile
      * with respects to plugins
      * @type {string}
      * @memberof SheriffProfilePlugin
@@ -29,7 +29,7 @@ export interface SheriffProfilePlugin<T = any> {
 export abstract class SheriffProfilePluginBase<T = any> implements SheriffProfilePlugin<T> {
     /**
      * This property is used for namespacing the form data,
-     * validation and maintaining state of sheriff profile 
+     * validation and maintaining state of profile 
      * with respects to plugins
      * @type {string}
      * @memberof SheriffProfilePlugin
@@ -83,7 +83,7 @@ export abstract class SheriffProfilePluginBase<T = any> implements SheriffProfil
                 ? <DisplayComponent key={this.name} {...props} />
                 : (
                     <div>
-                        Sheriff Profile Plugin: DisplayComponent not set
+                        Profile Plugin: DisplayComponent not set
                     </div>
                 )
         );

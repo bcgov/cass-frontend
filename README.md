@@ -1,5 +1,7 @@
-# Scheriff Scheduling Frontend (Shuber)
-The frontend portion of the Sheriff Scheduling System (code named Shuber).
+# Court Administration Scheduling Frontend
+The frontend portion of the Court Administration Scheduling System.
+
+This project is based on the Sheriff Scheduling System.  It started as a POC/Demo and therefore may still contain references to the term `sheriff`.
 
 ## Project Architecture
 ![Context Diagram](https://github.com/bcgov/jag-shuber-api/blob/master/docs/Context%20diagram%20for%20Scheduling%20System.png)
@@ -29,7 +31,7 @@ The development scripts for this application allow customization via an environm
 
 ```env
 # Location to proxy API Traffic
-API_URL="https://frontend-jag-shuber-dev.pathfinder.gov.bc.ca/"
+API_URL="https://frontend-apndkr-dev.pathfinder.gov.bc.ca/"
 # Fake Siteminder Header Overrides
 SMGOV_USERGUID='SOMEGUIDGOESHERE'
 SMGOV_USERDISPLAYNAME='Name, Your'

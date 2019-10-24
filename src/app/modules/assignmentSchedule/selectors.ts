@@ -30,8 +30,8 @@ export const allScheduledAssignments = createSelector(
         ).forEach((item, assignmentIndex) => {
 
             item.dutyRecurrences!.forEach(recurrence => {
-                let startTime = moment(recurrence.startTime, 'HH:mm');
-                let endTime = moment(recurrence.endTime, 'HH:mm');
+                let startTime = moment(recurrence.startTime, 'h:mm a');
+                let endTime = moment(recurrence.endTime, 'h:mm a');
                 // Add multiple assignment records based on the weekdays selected for each assignment
                 DaysOfWeek.getWeekdayNumbers(recurrence.daysBitmap).forEach((day, dayIndex) => {
                     for(let numSheriffs = 1; numSheriffs <= recurrence.sheriffsRequired; numSheriffs++) {

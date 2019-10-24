@@ -85,7 +85,7 @@ class TimePicker extends React.Component<TimePickerProps> {
         onAfterChange={(e) => this.handleAfterChange(e)}
         handle={(p: any) =>
           <HandleWithTooltip
-            overlayFormatter={(v) => moment(minTime).add('minutes', v).format('HH:mm')}
+            overlayFormatter={(v) => moment(minTime).add('minutes', v).format('h:mm a')}
             overlayStyle={{ zIndex: 1200 }}
             {...p}
           />

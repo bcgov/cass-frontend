@@ -10,7 +10,8 @@ import {
     DateType,
     TimeType,
     WorkSectionCode,
-    Shift
+    Shift,
+    WORK_SECTIONS,
 } from '../api/Api';
 import DaysOfWeekChecklist from './FormElements/DaysOfWeekChecklist';
 import NumberSpinner from './FormElements/NumberSpinner';
@@ -62,7 +63,7 @@ export default class ScheduleShiftForm extends
         } = this.props;
         return (
             <div>
-                <h1>{toTitleCase(workSectionId)}</h1>
+                <h1>{workSectionId ? toTitleCase(WORK_SECTIONS[workSectionId]) : ''}</h1>
                 <br/>
                 <Field
                     name="timeRange"
@@ -110,7 +111,7 @@ export default class ScheduleShiftForm extends
                     fieldToolTip={
                         <HelpPopover 
                             // tslint:disable-next-line:max-line-length
-                            helpText={'For shift assignments already imported into the duty roster, make your edits in the duty roster.'}
+                            helpText={'For shift assignments already imported into the daily assignments, make your edits in the daily assignments.'}
                         />}
                     label="Anticipated Assignment"
                 />}

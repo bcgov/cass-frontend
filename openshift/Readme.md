@@ -1,5 +1,7 @@
 # Frontend Devops Resources
 
+This project uses the [openshift-developer-tools](https://github.com/BCDevOps/openshift-developer-tools/tree/master/bin) scripts to manage its OpenShift Build and Deployment configurations.  Refer to the associated project documentation for details.
+
 ## Structure
 
 ```
@@ -18,29 +20,9 @@ templates/
 
 ### Policies
 
-#### Dev
-```
-oc policy add-role-to-user system:image-puller system:serviceaccount:jag-shuber-dev:default -n jag-shuber-tools
-oc policy add-role-to-user edit system:serviceaccount:jag-shuber-tools:jenkins -n jag-shuber-dev
+The project policies only need to be setup once.
 
-```
-
-#### Test
-```
-oc policy add-role-to-user system:image-puller system:serviceaccount:jag-shuber-test:default -n jag-shuber-tools
-oc policy add-role-to-user edit system:serviceaccount:jag-shuber-tools:jenkins -n jag-shuber-test
-
-```
-
-#### Prod
-```
-oc policy add-role-to-user system:image-puller system:serviceaccount:jag-shuber-prod:default -n jag-shuber-tools
-oc policy add-role-to-user edit system:serviceaccount:jag-shuber-tools:jenkins -n jag-shuber-prod
-
-```
-
-
-
+Use `initOSProjects.sh` to setup the initial project policies on all of your projects at once.
 
 The `frontend-build.json` defines a build configuration for a *Jenkins Pipeline* which uses the (`jenkinsfile`)[../Jenkinsfile] in the root of the repository.  This file defines our declarative pipeline, currently this is how the pipeline is structured:
 
@@ -59,6 +41,13 @@ The `frontend-build.json` defines a build configuration for a *Jenkins Pipeline*
 - ⬇
 - Tag the Image as `prod`
 
+# Publishing your Build and Deployment Configurations
+
+Use `genParams.sh` to setup your parameters for your various environments.
+
+Use `genBuilds.sh` to publish or update your build configurations.
+
+Use `genDepls.sh` to publish or update your deployment configurations.
 
 # Background reading/Resources
 
