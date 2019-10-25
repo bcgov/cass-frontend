@@ -9,7 +9,7 @@ import {
 } from '../assignments/actions';
 import { getShifts } from '../shifts/actions';
 import { userTokenRequest } from './requests';
-import { decodeJwt } from 'jag-shuber-api';
+import { decodeJwt } from 'cass-api';
 
 // The following gives us type-safe redux actions
 // see https://medium.com/@dhruvrajvanshi/some-tips-on-type-safety-with-redux-98588a85604c

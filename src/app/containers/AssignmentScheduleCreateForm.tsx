@@ -14,7 +14,7 @@ import { visibleTime } from '../modules/schedule/selectors';
 import AssignmentForm, { CourtSecurityFields, AssignmentFormProps } from '../components/AssignmentForm';
 import { createAssignment } from '../modules/assignments/actions';
 import { allAssignments } from '../modules/assignments/selectors';
-import { DateType } from 'jag-shuber-api';
+import { DateType } from 'cass-api';
 
 // wrapping generic assignment form in redux-form
 const formConfig: ConfigProps<any, AssignmentFormProps> = {

@@ -43,7 +43,7 @@ import SheriffDutyDragSource from '../SheriffDutyDragSource';
 import AssignmentSheriffDutyReassignmentModal from '../AssignmentSheriffDutyReassignmentModal';
 import { updateDraggingSheriff } from '../../modules/dutyRoster/actions';
 import { TimelineMarkers, TodayMarker } from 'react-calendar-timeline';
-import { doTimeRangesOverlap, isTimeWithin, TimeRange } from 'jag-shuber-api';
+import { doTimeRangesOverlap, isTimeWithin, TimeRange } from 'cass-api';
 import { allShifts } from '../../modules/shifts/selectors';
 
 interface DutyRosterTimelineProps extends TimelineProps {

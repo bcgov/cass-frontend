@@ -21,7 +21,7 @@ function getVersionFileConfig() {
   let lockJson = lockfile.parse(lockFile);
 
   // Here we go and get the version of the api from the yarn.lock file
-  const apiLockVersionId = Object.keys(lockJson.object).find(k => k.startsWith('jag-shuber-api'))
+  const apiLockVersionId = Object.keys(lockJson.object).find(k => k.startsWith('cass-api'))
   const apiLockVersionObject = lockJson.object[apiLockVersionId];
   const { resolved: resolvedUrl = '', version: apiVersion = '' } = apiLockVersionObject;
   const matches = resolvedUrl.match(/(.*\/)(.*)/)

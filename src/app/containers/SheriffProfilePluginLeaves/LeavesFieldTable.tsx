@@ -11,7 +11,7 @@ import LeavePersonalSubCodeSelector from '../LeavePersonalSubCodeSelector';
 import CancelLeaveButton from '../CancelLeaveButton';
 import LeaveCancelledPopover from '../../components/LeaveCancelledPopover';
 import TimePickerDropDownField from '../../components/FormElements/TimePickerDropDownField';
-import { fromTimeString, toTimeString } from 'jag-shuber-api';
+import { fromTimeString, toTimeString } from 'cass-api';
 import LeaveSubCodeDisplay from '../LeaveSubCodeDisplay';
 import LeaveTrainingSubCodeSelector from '../LeaveTrainingSubCodeSelector';
 

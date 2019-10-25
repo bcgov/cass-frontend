@@ -10,7 +10,7 @@ import {
 } from '../../api';
 import { getWorkSectionColour } from '../../api/utils';
 import SheriffDutyDropTarget from '../../containers/SheriffDutyDropTarget';
-import { doTimeRangesOverlap } from 'jag-shuber-api';
+import { doTimeRangesOverlap } from 'cass-api';
 
 export interface SheriffDutyBarProps {
     sheriffId?: IdType;

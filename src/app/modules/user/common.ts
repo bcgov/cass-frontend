@@ -1,4 +1,4 @@
-import { TokenPayload } from 'jag-shuber-api';
+import { TokenPayload } from 'cass-api';
 import { RequestActionState } from '../../infrastructure/Requests/RequestActionBase';
 
 export interface UserState {

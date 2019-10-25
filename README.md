@@ -1,10 +1,18 @@
 # Court Administration Scheduling Frontend
-The frontend portion of the Court Administration Scheduling System.
+The frontend portion of the Court Administration Scheduling System.  The API for the Court Administration Scheduling System can be found here; [Court Administration Scheduling API](https://github.com/bcgov/cass-api)
 
-This project is based on the Sheriff Scheduling System.  It started as a POC/Demo and therefore may still contain references to the term `sheriff`.
+This project is based on the [Sheriff Scheduling Frontend](https://github.com/bcgov/jag-shuber-frontend).  Although this project is not (can't be) a direct fork of the [Sheriff Scheduling Frontend](https://github.com/bcgov/jag-shuber-frontend), the commit history was retained to make it easy (although not quite as easy as a PR) to share changes between the projects.
+
+This project was done with a very limited budget and timeline as a POC/Demo, as such it may still contain references to the term `sheriff`.
+
+## Looking toward the future
+
+At it's core this (and the parent project) is a scheduling application that does not need to be fixed as a domain specific application.
+
+Give more time and budget, the scheduling features and UX of the Sheriff/Court Administration Scheduling System should be developed into a more generic application that can be **configured** (through deployment (preferably) and/or build configuration) to act as a scheduling system for any domain that would benefit from scheduling features provided by the application.  Alternatively it could be developed into a multi-tenant/domain system to service multiple business areas within a single application.
 
 ## Project Architecture
-![Context Diagram](https://github.com/bcgov/jag-shuber-api/blob/master/docs/Context%20diagram%20for%20Scheduling%20System.png)
+![Context Diagram](https://github.com/bcgov/cass-api/blob/master/docs/Context%20diagram%20for%20Scheduling%20System.png)
 
 The notes on the projects architecture as well as other development notes can be found in the [Project Docs](./docs/index.md)
 
@@ -62,7 +70,7 @@ Open [http://localhost:8000](http://localhost:8000) to view it in the browser.<b
 
 > `yarn start:dev`
 >
-> The same as `yarn:start` however overrides the API_URL to point at a development instance of the API at its default port [http://localhost:3001](http://localhost:3001).  Note: you must be running the [API Project](https://github.com/bcgov/jag-shuber-api) concurrently.
+> The same as `yarn:start` however overrides the API_URL to point at a development instance of the API at its default port [http://localhost:3001](http://localhost:3001).  Note: you must be running the [API Project](https://github.com/bcgov/cass-api) concurrently.
 
 > `yarn test`
 >
@@ -71,7 +79,7 @@ See the section about [running tests](#running-tests) for more information.
 
 > `yarn update-api`
 >
-> Upates [jag-shuber-api](https://github.com/bcgov/jag-shuber-api) package to the most recent version. 
+> Upates [cass-api](https://github.com/bcgov/cass-api) package to the most recent version. 
 
 > `yarn storybook`
 >

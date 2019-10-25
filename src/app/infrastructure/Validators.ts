@@ -1,5 +1,5 @@
 import moment from 'moment';
-import { fromTimeString } from 'jag-shuber-api';
+import { fromTimeString } from 'cass-api';
 
 export const VALIDATOR_MESSAGES = {
     INVALID_INTEGER: 'Must be an integer.',
