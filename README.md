@@ -4,7 +4,7 @@ The frontend portion of the Court Administration Scheduling System.
 This project is based on the Sheriff Scheduling System.  It started as a POC/Demo and therefore may still contain references to the term `sheriff`.
 
 ## Project Architecture
-![Context Diagram](https://github.com/bcgov/jag-shuber-api/blob/master/docs/Context%20diagram%20for%20Scheduling%20System.png)
+![Context Diagram](https://github.com/bcgov/cass-api/blob/master/docs/Context%20diagram%20for%20Scheduling%20System.png)
 
 The notes on the projects architecture as well as other development notes can be found in the [Project Docs](./docs/index.md)
 
@@ -62,7 +62,7 @@ Open [http://localhost:8000](http://localhost:8000) to view it in the browser.<b
 
 > `yarn start:dev`
 >
-> The same as `yarn:start` however overrides the API_URL to point at a development instance of the API at its default port [http://localhost:3001](http://localhost:3001).  Note: you must be running the [API Project](https://github.com/bcgov/jag-shuber-api) concurrently.
+> The same as `yarn:start` however overrides the API_URL to point at a development instance of the API at its default port [http://localhost:3001](http://localhost:3001).  Note: you must be running the [API Project](https://github.com/bcgov/cass-api) concurrently.
 
 > `yarn test`
 >
@@ -71,7 +71,7 @@ See the section about [running tests](#running-tests) for more information.
 
 > `yarn update-api`
 >
-> Upates [jag-shuber-api](https://github.com/bcgov/jag-shuber-api) package to the most recent version. 
+> Upates [cass-api](https://github.com/bcgov/cass-api) package to the most recent version. 
 
 > `yarn storybook`
 >

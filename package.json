@@ -1,5 +1,5 @@
 {
-  "name": "shuber",
+  "name": "cass",
   "version": "0.1.0",
   "private": true,
   "homepage": "/",
@@ -12,7 +12,7 @@
     "prepare": "patch-package",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
-    "update-api": "yarn add github:bcgov/jag-shuber-api",
+    "update-api": "yarn add github:bcgov/cass-api",
     "snyk-protect": "snyk protect",
     "prepublish": "npm run snyk-protect"
   },
@@ -33,7 +33,7 @@
     "interact.js": "^1.2.8",
     "interactjs": "^1.3.4",
     "istanbul": "^0.4.5",
-    "jag-shuber-api": "github:bcgov/jag-shuber-api",
+    "cass-api": "github:bcgov/cass-api",
     "jest": "20.0.4",
     "map": "^1.0.1",
     "moment": "^2.22.2",

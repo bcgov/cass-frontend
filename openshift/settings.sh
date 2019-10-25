@@ -1,5 +1,5 @@
 export PROJECT_NAMESPACE="apndkr"
-export GIT_URI="https://github.com/WadeBarnes/jag-shuber-frontend.git"
+export GIT_URI="https://github.com/bcgov/cass-frontend.git"
 export GIT_REF="cass-renaming"
 
 # The project components

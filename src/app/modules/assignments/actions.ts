@@ -9,8 +9,8 @@ import { IdType, AssignmentDuty, SheriffDuty, Shift } from '../../api';
 import { ThunkAction } from '../../store';
 import { getAssignmentDuty } from './selectors';
 import { getSheriffShiftsForDate } from '../shifts/selectors';
-import { TimeRange, isTimeWithin } from 'jag-shuber-api';
-//import { doTimeRangesOverlap } from 'jag-shuber-api';
+import { TimeRange, isTimeWithin } from 'cass-api';
+//import { doTimeRangesOverlap } from 'cass-api';
 //import moment from 'moment';
 
 // Assignments

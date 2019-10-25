@@ -1,4 +1,4 @@
-import * as ShuberApi from 'jag-shuber-api';
+import * as CassApi from 'cass-api';
 import moment from 'moment';
 import {
     API,
@@ -41,7 +41,7 @@ export function toWorkSectionCodePath(workSectionCode: WorkSectionCode = 'OTHER'
     return `/workSectionCodes/${workSectionCode}`;
 }
 
-class ShuberApiClient extends ShuberApi.Client {
+class CassApiClient extends CassApi.Client {
 
     constructor(baseUrl: string) {
         super(baseUrl);
@@ -51,7 +51,7 @@ class ShuberApiClient extends ShuberApi.Client {
         const apiError = super.processError(err);
         // If we've got a validation error, we likely submitted a form
         // so return a SubmissionError for the sake of redux forms
-        if (ShuberApi.Errors.isValidationError(apiError)) {
+        if (CassApi.Errors.isValidationError(apiError)) {
             const fields = apiError.fields || {};
             const fieldKeys = Object.keys(fields);
             if (fieldKeys.length > 0) {
@@ -68,7 +68,7 @@ class ShuberApiClient extends ShuberApi.Client {
                     _error: 'General Validation Error: todo, extract better error message from response'
                 });
             }
-        } else if (ShuberApi.Errors.isDatabaseError(apiError)) {
+        } else if (CassApi.Errors.isDatabaseError(apiError)) {
             apiError.message = apiError.detail;
         }
 
@@ -80,17 +80,17 @@ class ShuberApiClient extends ShuberApi.Client {
 
 export default class Client implements API {
 
-    private _client: ShuberApi.Client;
+    private _client: CassApi.Client;
     private _locationId: string;
 
     constructor(baseUrl: string = '/') {
-        this._client = new ShuberApiClient(baseUrl);
+        this._client = new CassApiClient(baseUrl);
         this._client.requestInterceptor = (req) => {
             return req;
         };
     }
 
-    get onTokenChanged(): ShuberApi.TypedEvent<string | undefined> {
+    get onTokenChanged(): CassApi.TypedEvent<string | undefined> {
         return this._client.onTokenChanged;
     }
 

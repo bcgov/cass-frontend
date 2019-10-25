@@ -1,6 +1,6 @@
 import { RootState } from '../../store';
 import { createSelector } from 'reselect';
-import { TokenPayload } from 'jag-shuber-api';
+import { TokenPayload } from 'cass-api';
 import { userTokenRequest } from './requests';
 
 export const currentLocation = (state: RootState): string => {

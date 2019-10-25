@@ -21,7 +21,7 @@ import {
     TimeType
 } from '../api';
 import { MapType } from '../api/Api';
-import { doTimeRangesOverlap } from 'jag-shuber-api';
+import { doTimeRangesOverlap } from 'cass-api';
 import PartialLeavePopover from '../components/PartialLeavePopover';
 import AlertIcon from '../components/Icons/Alert';
 
