@@ -37,13 +37,8 @@ objects:
       description: |
         Allow the frontend to talk to the internet or the api pod.
       source:
-        - - app=${APP_NAME}
-        - - env=${TAG_NAME}
         - - role=${ROLE}
       destination:
-        - - app=${APP_NAME}
-        - - env=${TAG_NAME}
-        - - ext:network=any
         - - role=api
 
   - kind: DeploymentConfig
