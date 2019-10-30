@@ -64,9 +64,9 @@ export function createMarks(minTime: Moment, maxTime: Moment, timeIncrement: num
                     transform: 'rotate(45deg)',
                     webkitTransform: 'rotate(45deg)',
                     msTransform: 'rotate(45deg)',
-                    marginLeft: -25,
-                    marginTop: 10,
-                    width: '5.5%'
+                    marginLeft: '-5%',
+                    marginTop: '1%',
+                    width: '10.0%'
                 },
                 label: timeLabel.format('h a')
             };

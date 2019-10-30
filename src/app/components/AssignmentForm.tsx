@@ -172,7 +172,7 @@ interface DutyRecurrenceFormData {
     };
 }
 
-const TIME_FORMAT = 'hh:mm:ss a';
+const TIME_FORMAT = 'hh:mm:sszz';
 
 // tslint:disable-next-line:max-line-length
 export default class AssignmentForm extends React.Component<AssignmentFormProps & InjectedFormProps<any, AssignmentFormProps>> {
@@ -184,8 +184,8 @@ export default class AssignmentForm extends React.Component<AssignmentFormProps 
         assignment.dutyRecurrences = dutyRecurrences.map((element) => ({
             id: element.id,
             daysBitmap: element.daysBitmap,
-            startTime: moment(element.timeRange.startTime).format(TIME_FORMAT),
-            endTime: moment(element.timeRange.endTime).format(TIME_FORMAT),
+            startTime: moment(element.timeRange.startTime, TIME_FORMAT).toISOString(),
+            endTime: moment(element.timeRange.endTime, TIME_FORMAT).toISOString(),
             sheriffsRequired: element.sheriffsRequired
         }));
 
