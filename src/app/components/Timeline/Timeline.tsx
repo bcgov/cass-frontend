@@ -51,6 +51,19 @@ export default class Timeline<TItem, TGroup> extends React.PureComponent<Timelin
     protected _timelineRef: any;
 
     render() {
+
+        ReactTimeline.defaultProps.headerLabelFormats = Object.assign({}, ReactTimeline.defaultProps.headerLabelFormats, {
+            hourShort: 'h A',
+            hourMedium: 'h A',
+            hourMediumLong: 'L, h A',
+            hourLong: 'dddd, LL, h A',
+        });
+        ReactTimeline.defaultProps.subHeaderLabelFormats = Object.assign({}, ReactTimeline.defaultProps.subHeaderLabelFormats, {
+            hourShort: 'h A',
+            hourLong: 'h A',
+            minuteLong: 'h:mm A'
+        });
+
         const headerLabelFormats: Partial<HeaderLabelFormats> = {
             ...ReactTimeline.defaultProps.headerLabelFormats,
             dayLong: 'dddd LL',

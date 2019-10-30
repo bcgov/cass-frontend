@@ -4,6 +4,7 @@ import {
     DaysOfWeek
 } from '../api';
 import { Badge } from 'react-bootstrap';
+import moment from 'moment';
 
 export interface AssignmentDefaultRecurrenceDetailsProps {
     data: DutyRecurrence;
@@ -12,7 +13,7 @@ export interface AssignmentDefaultRecurrenceDetailsProps {
 export default class AssignmentDefaultRecurrenceDetails 
     extends React.PureComponent<AssignmentDefaultRecurrenceDetailsProps, any> {
         getTimeDisplay(timeString: string) {
-            return timeString.substr(0, timeString.lastIndexOf(':'));
+            return moment(timeString, 'HH:mm:sszz').format('h:mm a');
         }
     
         render() {
